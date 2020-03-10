@@ -13,10 +13,10 @@ class PostsController < ApplicationController
 
   # add create method here
   def create
-      @post = Post.new
-      @post.title = params[:title]
-      @post.description = params[:description]
-      @post.save 
-      redirect_to post_path(@post)
+      @post = Post.new                         # create a new object
+      @post.title = params[:title]             # add title 
+      @post.description = params[:description] # add description
+      @post.save                               # Save the object and the attributes of the new post 
+      redirect_to post_path(@post)             # redirect to the current id that was just made
   end 
 end
